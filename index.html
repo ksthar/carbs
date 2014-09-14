@@ -1,0 +1,30 @@
+<?DOCTYPE html>
+<html lang=EN>
+<head>
+	<title>Carb Counter</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link rel="stylesheet" type="text/css" href="./jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px)" href="./phone.css" />
+	<script src="node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js"></script>
+	<script src="jquery-1.9.0.min.js"></script>
+	<script src="jquery-ui.js"></script>
+</head>
+<body>
+	<div id="header"> 
+		<div id="title">Har&rsquo;s Carb Counter</div>
+	</div>
+
+	<div id="content">
+		<input id="spinner">
+	</div>
+
+	<script>
+		$( "#spinner" ).spinner();
+	</script>
+
+	<script src="app.js"></script>
+</body>
+</html>

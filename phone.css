@@ -1,0 +1,45 @@
+body {
+  font-size: 10pt;
+  font-family:  arial, sans-serif;
+  background-color: white;
+  color: black;
+}
+
+a {
+  color: blue;
+} 
+
+input {
+	background-color: white;
+	color: black;
+}
+
+input#spinner {
+	width: 60px;
+	height: 50px;
+	font-size: 3em;
+	text-align: right;
+}
+
+input.button {
+	background-color: black;
+	color: green;
+	border: 1px solid green;
+}
+
+div { }
+
+div.inline {
+	display: inline;
+}
+
+div#title {
+  font-family: courier, serif;
+	font-size: 1.5em;
+  color: blue;
+}
+
+div#content {
+	margin-top: 10px;
+	text-align: center;
+}
