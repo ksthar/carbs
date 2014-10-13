@@ -10,8 +10,10 @@ Simple web app using nodejs to keep track of daily carb intake.  I use this as a
 - _app.js_ Client-side app; REMEMBER to change the IP and port to match the server!
 
 ## Database
-- MySQL database
-- Schema:
+App was designed for a MySQL database, and uses the mysql module.
+
+### Schema:
+Extremely simple schema.  App demonstrates INSERT and UPDATE functions.
 
 	+-------+-------------+------+-----+---------+-------+
 	| Field | Type        | Null | Key | Default | Extra |
