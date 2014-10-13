@@ -22,7 +22,7 @@ var mysql=require('mysql');
 
 // Server location
 var serverPort = 8081;					/**< Port to run the server on	*/
-var serverUrl	= "192.168.1.2";	/**< Local URL for the server		*/
+var serverUrl	= "23.253.151.132";		/**< Local URL for the server		*/
 
 // setup credentials for mysql
 var mysql_username = 'username';
@@ -191,7 +191,7 @@ function opendb(){
 }
 
 // instantiate the client
-//var client = opendb();
+var client = opendb();
 
 // MySQL will idle and lose connection...
 // got to handle this or it will take the 
@@ -249,7 +249,7 @@ function grabCarbs( day, socket ){
 				// if exists == 0, then we need to add the record and initialize the carbs field,
 				// otherwise, we can go ahead and grab the carbs from the record...
 
-				//msgOut( 'MySQL', 'I see ' + exists.exists );
+				msgOut( 'MySQL', 'I see ' + exists.exists );
 
 				if( exists.exists == '0' ) {
 					msgOut( 'MySQL', 'There is not a record for today; I need to make one...' );
@@ -331,9 +331,11 @@ function httpHandler (req, res){
   switch(theFile){
     case '/':
       theFile = '/index.html';
+	  break;
 
     case '/phone.css':
       theFile = '/phone.css';
+	  break;
 
     default:
       // figure out the MIME type
@@ -381,7 +383,7 @@ io.sockets.on( 'connection', function( socket ){
 	// 
 	msgOut( 'socket.io','Received connection on the socket...');
 	// grab today's carb count from the database
-	//grabCarbs( getMySQLdate(), socket );
+	grabCarbs( getMySQLdate(), socket );
 	
 
 	socket.on( 'status', function( data ){
@@ -390,7 +392,7 @@ io.sockets.on( 'connection', function( socket ){
 
 	socket.on( 'updateCarbs', function( data ){
 		msgOut( 'socket.io', 'New carb count: ' + data );
-		//setCarbs( getMySQLdate(), data, socket );
+		setCarbs( getMySQLdate(), data, socket );
 	});
 
 	socket.on( 'disconnect', function(){

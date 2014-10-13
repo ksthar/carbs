@@ -13,8 +13,8 @@
 // --------------------------------------------------------------------------------------------
 //
 var maxCarbs = 20;											/**< Daily maximum carbs		*/
-var serverUrl = "http://75.70.161.1";		/**< URL of server					*/
-var serverPort = "8081";								/**< Port to connect to			*/
+var serverUrl = "http://23.253.151.132";					/**< URL of server					*/
+var serverPort = "8081";									/**< Port to connect to			*/
 
 // --------------------------------------------------------------------------------------------
 /** 
