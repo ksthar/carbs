@@ -1,7 +1,7 @@
 # CARB COUNTER
 
 Simple web app using node.js to keep track of daily carb intake.  Use latest node, the 0.6.x version that comes with Ubuntu 12.04 ain't gonna cut it. Make sure you have build-essentials installed. 
-	git clone https://github.com/joyent/node.git
+>git clone https://github.com/joyent/node.git
 
 ## Structure
 
@@ -11,10 +11,10 @@ Simple web app using node.js to keep track of daily carb intake.  Use latest nod
 ## Database
 - MySQL database
 - Schema:
-	+-------+-------------+------+-----+---------+-------+
-	| Field | Type        | Null | Key | Default | Extra |
-	+-------+-------------+------+-----+---------+-------+
-	| day   | varchar(10) | YES  |     | NULL    |       |
-	| carbs | int(11)     | YES  |     | NULL    |       |
-	+-------+-------------+------+-----+---------+-------+
+>+-------+-------------+------+-----+---------+-------+
+>| Field | Type        | Null | Key | Default | Extra |
+>+-------+-------------+------+-----+---------+-------+
+>| day   | varchar(10) | YES  |     | NULL    |       |
+>| carbs | int(11)     | YES  |     | NULL    |       |
+>+-------+-------------+------+-----+---------+-------+
 
